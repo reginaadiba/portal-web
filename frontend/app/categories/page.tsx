@@ -1,11 +1,4 @@
-// app/categories/page.tsx
-
-async function getCategories() {
-  const res = await fetch("http://localhost:3001/categories", {
-    cache: "no-store",
-  });
-  return res.json();
-}
+import { getCategories } from "../lib/category";
 
 export default async function CategoriesPage() {
   const categories = await getCategories();
